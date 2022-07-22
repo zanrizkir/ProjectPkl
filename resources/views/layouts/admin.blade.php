@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Dashboard</title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Dashboard</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Tempusdominus Bbootstrap 4 -->
-    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="{{asset('assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     <!-- JQVMap -->
-    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/plugins/jqvmap/jqvmap.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{asset('assets/dist/css/adminlte.min.css')}}">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="{{asset('assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="{{asset('assets/plugins/daterangepicker/daterangepicker.css')}}">
     <!-- summernote -->
-    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('assets/plugins/summernote/summernote-bs4.min.css')}}">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="{{asset('assets/dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60"
+                width="60">
+        </div>
 
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                            class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="index3.html" class="nav-link">Home</a>
@@ -47,21 +54,31 @@
                 </li>
             </ul>
 
-            <!-- SEARCH FORM -->
-            <form class="form-inline ml-3">
-                <div class="input-group input-group-sm">
-                    <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                        aria-label="Search">
-                    <div class="input-group-append">
-                        <button class="btn btn-navbar" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
                 <!-- Messages Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
@@ -72,7 +89,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user1-128x128.jpg" alt="User Avatar"
+                                <img src="{{asset('assets/plugins/dist/img/user1-128x128.jpg" alt="U')}}xser Avatar"
                                     class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -89,7 +106,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user8-128x128.jpg" alt="User Avatar"
+                                <img src="{{asset('assets/plugins/dist/img/user8-128x128.jpg" alt="U')}}xser Avatar"
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -106,7 +123,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user3-128x128.jpg" alt="User Avatar"
+                                <img src="{{asset('assets/plugins/dist/img/user3-128x128.jpg" alt="U')}}xser Avatar"
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -152,7 +169,13 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true"
+                        href="#" role="button">
                         <i class="fas fa-th-large"></i>
                     </a>
                 </li>
@@ -164,7 +187,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                <img src="{{asset('assets/plugins/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle e')}}xlevation-3"
                     style="opacity: .8">
                 <span class="brand-text font-weight-light">AdminLTE 3</span>
             </a>
@@ -174,10 +197,23 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="{{asset('assets/plugins/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="U')}}xser Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Zanrizkir</a>
+                        <a href="#" class="d-block">Alexander Pierce</a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -187,7 +223,7 @@
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                        <li class="nav-item has-treeview menu-open">
+                        <li class="nav-item menu-open">
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
@@ -225,7 +261,7 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
@@ -260,6 +296,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fixed Sidebar <small>+ Custom Area</small></p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="pages/layout/fixed-topnav.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Fixed Navbar</p>
@@ -279,7 +321,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-chart-pie"></i>
                                 <p>
@@ -306,9 +348,15 @@
                                         <p>Inline</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="pages/charts/uplot.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>uPlot</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-tree"></i>
                                 <p>
@@ -367,7 +415,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
                                 <p>
@@ -402,7 +450,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
@@ -449,7 +497,15 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item">
+                            <a href="pages/kanban.html" class="nav-link">
+                                <i class="nav-icon fas fa-columns"></i>
+                                <p>
+                                    Kanban Board
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon far fa-envelope"></i>
                                 <p>
@@ -478,7 +534,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
@@ -535,9 +591,21 @@
                                         <p>Contacts</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/faq.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>FAQ</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/contact-us.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Contact us</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon far fa-plus-square"></i>
                                 <p>
@@ -547,28 +615,74 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/examples/login.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Login</p>
+                                        <p>
+                                            Login & Register v1
+                                            <i class="fas fa-angle-left right"></i>
+                                        </p>
                                     </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="pages/examples/login.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Login v1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/register.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Register v1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/forgot-password.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Forgot Password v1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/recover-password.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Recover Password v1</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/register.html" class="nav-link">
+                                    <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Register</p>
+                                        <p>
+                                            Login & Register v2
+                                            <i class="fas fa-angle-left right"></i>
+                                        </p>
                                     </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/forgot-password.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Forgot Password</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="pages/examples/recover-password.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Recover Password</p>
-                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="pages/examples/login-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Login v2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/register-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Register v2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/forgot-password-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Forgot Password v2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/recover-password-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Recover Password v2</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a href="pages/examples/lockscreen.html" class="nav-link">
@@ -620,9 +734,38 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-search"></i>
+                                <p>
+                                    Search
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/search/simple.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Simple Search</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/search/enhanced.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Enhanced</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="nav-header">MISCELLANEOUS</li>
                         <li class="nav-item">
-                            <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                            <a href="iframe.html" class="nav-link">
+                                <i class="nav-icon fas fa-ellipsis-h"></i>
+                                <p>Tabbed IFrame Plugin</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
                                 <i class="nav-icon fas fa-file"></i>
                                 <p>Documentation</p>
                             </a>
@@ -634,7 +777,7 @@
                                 <p>Level 1</p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-circle"></i>
                                 <p>
@@ -649,7 +792,7 @@
                                         <p>Level 2</p>
                                     </a>
                                 </li>
-                                <li class="nav-item has-treeview">
+                                <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>
@@ -725,7 +868,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Dashboard</h1>
+                            <h1 class="m-0">Dashboard</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -856,17 +999,16 @@
                                     <h3 class="card-title">Direct Chat</h3>
 
                                     <div class="card-tools">
-                                        <span data-toggle="tooltip" title="3 New Messages"
-                                            class="badge badge-primary">3</span>
+                                        <span title="3 New Messages" class="badge badge-primary">3</span>
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                             <i class="fas fa-minus"></i>
                                         </button>
-                                        <button type="button" class="btn btn-tool" data-toggle="tooltip"
-                                            title="Contacts" data-widget="chat-pane-toggle">
+                                        <button type="button" class="btn btn-tool" title="Contacts"
+                                            data-widget="chat-pane-toggle">
                                             <i class="fas fa-comments"></i>
                                         </button>
-                                        <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                                                class="fas fa-times"></i>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -881,7 +1023,7 @@
                                                 <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                             </div>
                                             <!-- /.direct-chat-infos -->
-                                            <img class="direct-chat-img" src="dist/img/user1-128x128.jpg"
+                                            <img class="direct-chat-img" src="{{asset('assets/plugins/dist/img/user1-1')}}x28x128.jpg"
                                                 alt="message user image">
                                             <!-- /.direct-chat-img -->
                                             <div class="direct-chat-text">
@@ -898,7 +1040,7 @@
                                                 <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                             </div>
                                             <!-- /.direct-chat-infos -->
-                                            <img class="direct-chat-img" src="dist/img/user3-128x128.jpg"
+                                            <img class="direct-chat-img" src="{{asset('assets/plugins/dist/img/user3-1')}}x28x128.jpg"
                                                 alt="message user image">
                                             <!-- /.direct-chat-img -->
                                             <div class="direct-chat-text">
@@ -911,11 +1053,11 @@
                                         <!-- Message. Default to the left -->
                                         <div class="direct-chat-msg">
                                             <div class="direct-chat-infos clearfix">
-                                                <span class="direct-chat-name float-left">Alexander Pierce</span>
+                                                <span class="direct-chat-name float-left">Zanrizkir</span>
                                                 <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                                             </div>
                                             <!-- /.direct-chat-infos -->
-                                            <img class="direct-chat-img" src="dist/img/user1-128x128.jpg"
+                                            <img class="direct-chat-img" src="{{asset('assets/plugins/dist/img/user1-1')}}x28x128.jpg"
                                                 alt="message user image">
                                             <!-- /.direct-chat-img -->
                                             <div class="direct-chat-text">
@@ -932,7 +1074,7 @@
                                                 <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                                             </div>
                                             <!-- /.direct-chat-infos -->
-                                            <img class="direct-chat-img" src="dist/img/user3-128x128.jpg"
+                                            <img class="direct-chat-img" src="{{asset('assets/plugins/dist/img/user3-1')}}x28x128.jpg"
                                                 alt="message user image">
                                             <!-- /.direct-chat-img -->
                                             <div class="direct-chat-text">
@@ -950,7 +1092,8 @@
                                         <ul class="contacts-list">
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="dist/img/user1-128x128.jpg">
+                                                    <img class="contacts-list-img" src="{{asset('assets/plugins/dist/img/user1-1')}}x28x128.jpg"
+                                                        alt="User Avatar">
 
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -967,7 +1110,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="dist/img/user7-128x128.jpg">
+                                                    <img class="contacts-list-img" src="{{asset('assets/plugins/dist/img/user7-1')}}x28x128.jpg"
+                                                        alt="User Avatar">
 
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -983,7 +1127,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="dist/img/user3-128x128.jpg">
+                                                    <img class="contacts-list-img" src="{{asset('assets/plugins/dist/img/user3-1')}}x28x128.jpg"
+                                                        alt="User Avatar">
 
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -999,7 +1144,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="dist/img/user5-128x128.jpg">
+                                                    <img class="contacts-list-img" src="{{asset('assets/plugins/dist/img/user5-1')}}x28x128.jpg"
+                                                        alt="User Avatar">
 
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -1015,7 +1161,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="dist/img/user6-128x128.jpg">
+                                                    <img class="contacts-list-img" src="{{asset('assets/plugins/dist/img/user6-1')}}x28x128.jpg"
+                                                        alt="User Avatar">
 
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -1031,7 +1178,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="dist/img/user8-128x128.jpg">
+                                                    <img class="contacts-list-img" src="{{asset('assets/plugins/dist/img/user8-1')}}x28x128.jpg"
+                                                        alt="User Avatar">
 
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -1097,7 +1245,8 @@
                                             </span>
                                             <!-- checkbox -->
                                             <div class="icheck-primary d-inline ml-2">
-                                                <input type="checkbox" value="" name="todo1" id="todoCheck1">
+                                                <input type="checkbox" value="" name="todo1"
+                                                    id="todoCheck1">
                                                 <label for="todoCheck1"></label>
                                             </div>
                                             <!-- todo text -->
@@ -1117,7 +1266,8 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </span>
                                             <div class="icheck-primary d-inline ml-2">
-                                                <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
+                                                <input type="checkbox" value="" name="todo2" id="todoCheck2"
+                                                    checked>
                                                 <label for="todoCheck2"></label>
                                             </div>
                                             <span class="text">Make the theme responsive</span>
@@ -1134,7 +1284,8 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </span>
                                             <div class="icheck-primary d-inline ml-2">
-                                                <input type="checkbox" value="" name="todo3" id="todoCheck3">
+                                                <input type="checkbox" value="" name="todo3"
+                                                    id="todoCheck3">
                                                 <label for="todoCheck3"></label>
                                             </div>
                                             <span class="text">Let theme shine like a star</span>
@@ -1151,7 +1302,8 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </span>
                                             <div class="icheck-primary d-inline ml-2">
-                                                <input type="checkbox" value="" name="todo4" id="todoCheck4">
+                                                <input type="checkbox" value="" name="todo4"
+                                                    id="todoCheck4">
                                                 <label for="todoCheck4"></label>
                                             </div>
                                             <span class="text">Let theme shine like a star</span>
@@ -1168,7 +1320,8 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </span>
                                             <div class="icheck-primary d-inline ml-2">
-                                                <input type="checkbox" value="" name="todo5" id="todoCheck5">
+                                                <input type="checkbox" value="" name="todo5"
+                                                    id="todoCheck5">
                                                 <label for="todoCheck5"></label>
                                             </div>
                                             <span class="text">Check your messages and notifications</span>
@@ -1185,7 +1338,8 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </span>
                                             <div class="icheck-primary d-inline ml-2">
-                                                <input type="checkbox" value="" name="todo6" id="todoCheck6">
+                                                <input type="checkbox" value="" name="todo6"
+                                                    id="todoCheck6">
                                                 <label for="todoCheck6"></label>
                                             </div>
                                             <span class="text">Let theme shine like a star</span>
@@ -1200,8 +1354,8 @@
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer clearfix">
-                                    <button type="button" class="btn btn-info float-right"><i class="fas fa-plus"></i>
-                                        Add item</button>
+                                    <button type="button" class="btn btn-primary float-right"><i
+                                            class="fas fa-plus"></i> Add item</button>
                                 </div>
                             </div>
                             <!-- /.card -->
@@ -1220,11 +1374,11 @@
                                     <!-- card tools -->
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-primary btn-sm daterange"
-                                            data-toggle="tooltip" title="Date range">
+                                            title="Date range">
                                             <i class="far fa-calendar-alt"></i>
                                         </button>
-                                        <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse"
-                                            data-toggle="tooltip" title="Collapse">
+                                        <button type="button" class="btn btn-primary btn-sm"
+                                            data-card-widget="collapse" title="Collapse">
                                             <i class="fas fa-minus"></i>
                                         </button>
                                     </div>
@@ -1266,7 +1420,8 @@
                                     </h3>
 
                                     <div class="card-tools">
-                                        <button type="button" class="btn bg-info btn-sm" data-card-widget="collapse">
+                                        <button type="button" class="btn bg-info btn-sm"
+                                            data-card-widget="collapse">
                                             <i class="fas fa-minus"></i>
                                         </button>
                                         <button type="button" class="btn bg-info btn-sm" data-card-widget="remove">
@@ -1322,9 +1477,10 @@
                                         <!-- button with a dropdown -->
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-success btn-sm dropdown-toggle"
-                                                data-toggle="dropdown">
-                                                <i class="fas fa-bars"></i></button>
-                                            <div class="dropdown-menu float-right" role="menu">
+                                                data-toggle="dropdown" data-offset="-52">
+                                                <i class="fas fa-bars"></i>
+                                            </button>
+                                            <div class="dropdown-menu" role="menu">
                                                 <a href="#" class="dropdown-item">Add new event</a>
                                                 <a href="#" class="dropdown-item">Clear events</a>
                                                 <div class="dropdown-divider"></div>
@@ -1335,7 +1491,8 @@
                                             data-card-widget="collapse">
                                             <i class="fas fa-minus"></i>
                                         </button>
-                                        <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
+                                        <button type="button" class="btn btn-success btn-sm"
+                                            data-card-widget="remove">
                                             <i class="fas fa-times"></i>
                                         </button>
                                     </div>
@@ -1359,10 +1516,10 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.0.4
+                <b>Version</b> 3.2.0
             </div>
         </footer>
 
@@ -1375,39 +1532,39 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
     <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="{{asset('assets/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
     <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
+    <script src="{{asset('assets/plugins/chart.js/Chart.min.js')}}"></script>
     <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
+    <script src="{{asset('assets/plugins/sparklines/sparkline.js')}}"></script>
     <!-- JQVMap -->
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <script src="{{asset('assets/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
     <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="{{asset('assets/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
     <!-- daterangepicker -->
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="{{asset('assets/plugins/moment/moment.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/daterangepicker/daterangepicker.js')}}"></script>
     <!-- Tempusdominus Bootstrap 4 -->
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="{{asset('assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
     <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="{{asset('assets/plugins/summernote/summernote-bs4.min.js')}}"></script>
     <!-- overlayScrollbars -->
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="{{asset('assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
+    <script src="{{asset('assets/dist/js/adminlte.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+    <script src="{{asset('assets/dist/js/demo.js')}}"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="{{asset('assets/dist/js/pages/dashboard.js')}}"></script>
 </body>
 
 </html>
