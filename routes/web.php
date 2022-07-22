@@ -30,6 +30,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // route siswa
 Route::resource('siswa', SiswaController::class);
 
+// Route Nilai
 Route::resource('nilai', NilaiController::class);
 
 Route::resource('jurusan', JurusanController::class);

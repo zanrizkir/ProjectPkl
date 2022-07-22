@@ -57,7 +57,7 @@
                             <a class="nav-link" href="{{ route('jurusan.index') }}">Jurusan</a>
                         </li>
                     </ul>
-                    </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

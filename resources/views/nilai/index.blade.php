@@ -19,7 +19,7 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nomor Induk nilai</th>
+                                        <th>Nomor Induk Siswa</th>
                                         <th>Kode Mata Pelajaran</th>
                                         <th>Nilai</th>
                                         <th>Grade</th>
