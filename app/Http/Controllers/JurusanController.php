@@ -41,12 +41,12 @@ class JurusanController extends Controller
      */
     public function store(Request $request)
     {
-        // $validated = $request->validate([
-        //     'kode_mp' => 'required|unique:jurusans|max:225',
-        //     'nama_mp' => 'required',
-        //     'semester' => 'required',
-        //     'jurusan' => 'required',
-        // ]);
+        $validated = $request->validate([
+            'kode_mp' => 'required|unique:jurusans|max:225',
+            'nama_mp' => 'required',
+            'semester' => 'required',
+            'jurusan' => 'required',
+        ]);
 
         $jurusan = new Jurusan();
         $jurusan->kode_mp = $request->kode_mp;
