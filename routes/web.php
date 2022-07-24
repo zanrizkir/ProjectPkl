@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\JurusanController;
@@ -29,6 +30,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // route siswa
 Route::resource('siswa', SiswaController::class);
+
+Route::resource('post',PostController::class);
 
 // Route Nilai
 Route::resource('nilai', NilaiController::class);

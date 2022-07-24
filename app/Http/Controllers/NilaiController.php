@@ -43,12 +43,12 @@ class NilaiController extends Controller
     public function store(Request $request)
     {
         //validasi
-        $validated = $request->validate([
-            'nis' => 'required|unique:nilais|max:255',
-            'kode_mata_pelajaran' => 'required',
-            'nilai' => 'required',
-            'indeks_nilai' => 'required',
-        ]);
+        // $validated = $request->validate([
+        //     'nis' => 'required|unique:nilais|max:255',
+        //     'kode_mata_pelajaran' => 'required',
+        //     'nilai' => 'required',
+        //     'indeks_nilai' => 'required',
+        // ]);
 
         $nilai = new Nilai();
         $nilai->nis = $request->nis;
@@ -70,7 +70,7 @@ class NilaiController extends Controller
         $nilai->indeks_nilai = $grade;
         $nilai->save();
         return redirect()->route('nilai.index')
-            ->with('success', 'Data berhasil dibuat!');
+            ->with('success', 'Nilai berhasil Ditambahkan!');
     }
 
     /**
@@ -108,11 +108,11 @@ class NilaiController extends Controller
     public function update(Request $request, $id)
     {
         // Validasi
-        $validated = $request->validate([
-            'nis' => 'required|max:255',
-            'kode_mata_pelajaran' => 'required',
-            'nilai' => 'required',
-        ]);
+        // $validated = $request->validate([
+        //     'nis' => 'required|max:255',
+        //     'kode_mata_pelajaran' => 'required',
+        //     'nilai' => 'required',
+        // ]);
 
         $nilai = Nilai::findOrFail($id);
         $nilai->nis = $request->nis;
@@ -136,7 +136,7 @@ class NilaiController extends Controller
         $nilai->indeks_nilai = $grade;
         $nilai->save();
         return redirect()->route('nilai.index')
-            ->with('success', 'Data berhasil diedit!');
+            ->with('success', 'Nilai berhasil diedit!');
     }
 
     /**
@@ -150,6 +150,6 @@ class NilaiController extends Controller
         $nilai = Nilai::findOrFail($id);
         $nilai->delete();
         return redirect()->route('nilai.index')
-            ->with('success', 'Data berhasil dihapus!');
+            ->with('success', 'Nilai berhasil dihapus!');
     }
 }
