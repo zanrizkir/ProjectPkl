@@ -59,7 +59,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/siswa" class="nav-link {{ $active == 'siswa' ? 'active' : null }}">
+                    <a href="/admin/wali" class="nav-link {{ $active == 'wali' ? 'active' : null }}">
+                        <p>
+                            Wali
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/siswa" class="nav-link {{ $active == 'siswa' ? 'active' : null }}">
                         <p>
                             siswa
                         </p>

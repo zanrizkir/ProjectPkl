@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\WaliController;
 use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\JurusanController;
@@ -29,7 +30,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // route siswa
-Route::resource('siswa', SiswaController::class);
+// Route::resource('siswa', SiswaController::class);
 
 Route::resource('post',PostController::class);
 
@@ -44,4 +45,12 @@ Route::get('/test-admin', function () {
 
 Route::get('/hello', function () {
     return view('hello');
+});
+
+Route::group(['prefix' => 'admin','midware' => ['auth']], function () {
+    Route::get('/', function () {
+        return view('admin.index');
+    });
+    Route::resource('siswa', SiswaController::class);
+    Route::resource('wali', WaliController::class);
 });

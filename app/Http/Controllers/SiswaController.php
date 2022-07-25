@@ -32,7 +32,7 @@ class SiswaController extends Controller
     public function create()
     {
         //
-        return view('siswa.create',['active' => 'siswa']);
+        return view('siswa.create', ['active' => 'siswa']);
     }
 
     /**
@@ -71,7 +71,7 @@ class SiswaController extends Controller
     public function show($id)
     {
         $siswa = Siswa::findOrFail($id);
-        return view('siswa.show',['active' => 'siswa'], compact('siswa'));
+        return view('siswa.show', ['active' => 'siswa'], compact('siswa'));
     }
 
     /**
@@ -83,7 +83,7 @@ class SiswaController extends Controller
     public function edit($id)
     {
         $siswa = Siswa::findOrFail($id);
-        return view('siswa.edit',['active' => 'siswa'], compact('siswa'));
+        return view('siswa.edit', ['active' => 'siswa'], compact('siswa'));
     }
 
     /**
