@@ -20,7 +20,8 @@ class SiswaController extends Controller
     {
         //menampilkan semua data dari model Siswa
         $siswa = Siswa::all();
-        return view('siswa.index', compact('siswa'));
+        $active = 'siswa';
+        return view('siswa.index', compact('siswa', 'active'));
     }
 
     /**
@@ -31,7 +32,7 @@ class SiswaController extends Controller
     public function create()
     {
         //
-        return view('siswa.create');
+        return view('siswa.create',['active' => 'siswa']);
     }
 
     /**
@@ -56,7 +57,8 @@ class SiswaController extends Controller
         $siswa->alamat_siswa = $request->alamat_siswa;
         $siswa->tanggal_lahir = $request->tanggal_lahir;
         $siswa->save();
-        return redirect()->route('siswa.index')
+        return redirect()
+            ->route('siswa.index')
             ->with('success', 'Data berhasil dibuat!');
     }
 
@@ -69,7 +71,7 @@ class SiswaController extends Controller
     public function show($id)
     {
         $siswa = Siswa::findOrFail($id);
-        return view('siswa.show', compact('siswa'));
+        return view('siswa.show',['active' => 'siswa'], compact('siswa'));
     }
 
     /**
@@ -81,8 +83,7 @@ class SiswaController extends Controller
     public function edit($id)
     {
         $siswa = Siswa::findOrFail($id);
-        return view('siswa.edit', compact('siswa'));
-
+        return view('siswa.edit',['active' => 'siswa'], compact('siswa'));
     }
 
     /**
@@ -108,7 +109,8 @@ class SiswaController extends Controller
         $siswa->alamat_siswa = $request->alamat_siswa;
         $siswa->tanggal_lahir = $request->tanggal_lahir;
         $siswa->save();
-        return redirect()->route('siswa.index')
+        return redirect()
+            ->route('siswa.index')
             ->with('success', 'Data berhasil diedit!');
     }
 
@@ -122,7 +124,8 @@ class SiswaController extends Controller
     {
         $siswa = Siswa::findOrFail($id);
         $siswa->delete();
-        return redirect()->route('siswa.index')
+        return redirect()
+            ->route('siswa.index')
             ->with('success', 'Data berhasil dihapus!');
     }
 }

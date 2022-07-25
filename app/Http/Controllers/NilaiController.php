@@ -20,7 +20,7 @@ class NilaiController extends Controller
     {
         //menampilkan semua data dari model nilai
         $nilai = Nilai::all();
-        return view('nilai.index', compact('nilai'));
+        return view('nilai.index',['active' => 'nilai'], compact('nilai'));
     }
 
     /**
@@ -31,7 +31,7 @@ class NilaiController extends Controller
     public function create()
     {
         //
-        return view('nilai.create');
+        return view('nilai.create',['active' => 'nilai']);
     }
 
     /**
@@ -82,7 +82,7 @@ class NilaiController extends Controller
     public function show($id)
     {
         $nilai = Nilai::findOrFail($id);
-        return view('nilai.show', compact('nilai'));
+        return view('nilai.show',['active' => 'nilai'], compact('nilai'));
     }
 
     /**
@@ -94,7 +94,7 @@ class NilaiController extends Controller
     public function edit($id)
     {
         $nilai = Nilai::findOrFail($id);
-        return view('nilai.edit', compact('nilai'));
+        return view('nilai.edit',['active' => 'nilai'], compact('nilai'));
 
     }
 

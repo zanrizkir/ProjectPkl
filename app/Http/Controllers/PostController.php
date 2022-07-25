@@ -21,7 +21,8 @@ class PostController extends Controller
     {
         //
         $a = Post::all();
-        return view('post.index', ['posts' => $a]);
+
+        return view('post.index', ['posts' => $a, 'active' => 'post']);
     }
 
     /**
@@ -32,7 +33,7 @@ class PostController extends Controller
     public function create()
     {
         //
-        return view('post.create');
+        return view('post.create',['active' => 'post']);
     }
 
     /**
@@ -53,7 +54,9 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->content = $request->content;
         $post->save();
-        return redirect()->route('post.index')->with('succes', 'Data Berhasil dibuat');
+        return redirect()
+            ->route('post.index')
+            ->with('succes', 'Data Berhasil dibuat');
     }
 
     /**
@@ -66,7 +69,7 @@ class PostController extends Controller
     {
         //
         $post = Post::findOrfail($id);
-        return view('post.show', compact('post'));
+        return view('post.show',['active' => 'post'], compact('post'));
     }
 
     /**
@@ -79,7 +82,7 @@ class PostController extends Controller
     {
         //
         $post = Post::findOrfail($id);
-        return view('post.edit', compact('post'));
+        return view('post.edit',['active' => 'post'], compact('post'));
     }
 
     /**
@@ -102,7 +105,9 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->content = $request->content;
         $post->save();
-        return redirect()->route('post.index')->with('succes', 'Data Berhasil diedit');
+        return redirect()
+            ->route('post.index')
+            ->with('succes', 'Data Berhasil diedit');
     }
 
     /**
@@ -116,6 +121,8 @@ class PostController extends Controller
         //
         $post = Post::findOrfail($id);
         $post->delete();
-        return redirect()->route('post.index')->with('succes', 'Data Berhasil dihapus');
+        return redirect()
+            ->route('post.index')
+            ->with('succes', 'Data Berhasil dihapus');
     }
 }

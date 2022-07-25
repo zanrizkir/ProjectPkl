@@ -20,7 +20,7 @@ class JurusanController extends Controller
     public function index()
     {
         $jurusan = Jurusan::all();
-        return view('jurusan.index', compact('jurusan'));
+        return view('jurusan.index',['active' => 'jurusan'], compact('jurusan'));
     }
 
     /**
@@ -30,7 +30,7 @@ class JurusanController extends Controller
      */
     public function create()
     {
-        return view('jurusan.create');
+        return view('jurusan.create',['active' => 'jurusan']);
     }
 
     /**
@@ -67,7 +67,7 @@ class JurusanController extends Controller
     public function show($id)
     {
         $jurusan = Jurusan::findOrFail($id);
-        return view('jurusan.show', compact('jurusan'));
+        return view('jurusan.show',['active' => 'jurusan'], compact('jurusan'));
     }
 
     /**
@@ -79,7 +79,7 @@ class JurusanController extends Controller
     public function edit($id)
     {
         $jurusan = Jurusan::findOrFail($id);
-        return view('jurusan.edit', compact('jurusan'));
+        return view('jurusan.edit',['active' => 'jurusan'], compact('jurusan'));
     }
 
     /**
